@@ -5,11 +5,11 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const heroImages = [
-  "/assets/pichero/1692084446071.png",
-  "/assets/pichero/1754728060024.png",
-  "/assets/pichero/Server.png",
-  "/assets/pichero/ey-bt-case-study.jpg",
-  "/assets/pichero/Gallery/ab20260323-kenya-atlas-telecom-tours.webp"
+  "/assets/pichero/hero_1.png",
+  "/assets/pichero/hero_2.png",
+  "/assets/pichero/hero_3.png",
+  "/assets/pichero/hero_4.jpg",
+  "/assets/pichero/Gallery/gallery_27.webp"
 ];
 
 export const Hero = () => {
@@ -40,7 +40,6 @@ export const Hero = () => {
             transition={{ duration: 1.5, ease: "easeInOut" }}
             alt="Telecom Infrastructure"
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
         </AnimatePresence>
         <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/60 via-zinc-950/40 to-zinc-950" />

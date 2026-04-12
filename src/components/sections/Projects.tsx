@@ -11,7 +11,7 @@ const projects = [
     location: "Island-wide",
     year: "2024-2026",
     status: "Ongoing",
-    image: "/assets/projectcard/36k1.jpg.webp",
+    image: "/assets/projectcard/project_2.webp",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = [
     location: "Colombo District",
     year: "2023",
     status: "Completed",
-    image: "/assets/projectcard/15-dialog_completes_sri_lankas_first_live_5g_vonr_trial.jpg",
+    image: "/assets/projectcard/project_1.jpg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = [
     location: "Kandy District",
     year: "2024",
     status: "Ongoing",
-    image: "/assets/projectcard/PHOTO-2024-10-23-12-44-16-1-1-e1730954184608.jpg",
+    image: "/assets/projectcard/project_5.jpg",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projects = [
     location: "Galle District",
     year: "2023",
     status: "Completed",
-    image: "/assets/projectcard/591884640_1301318435361245_5206179723918839912_n.jpg",
+    image: "/assets/projectcard/project_4.jpg",
   },
 ];
 
@@ -58,7 +58,6 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0]; key?: React.K
         src={project.image}
         alt={project.name}
         className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-all duration-700 group-hover:scale-110"
-        referrerPolicy="no-referrer"
       />
       
       <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-navy via-transparent to-transparent pointer-events-none">
@@ -98,27 +97,30 @@ export const Projects = () => {
     : projects.filter(p => p.category === activeCategory);
 
   return (
-    <section id="projects" className="py-24 bg-white">
+    <section id="projects" className="py-24 bg-light-grey">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8">
-          <div>
+        <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
+          <div className="max-w-2xl">
             <span className="text-electric font-bold tracking-widest uppercase text-sm mb-4 block">
               Our Portfolio
             </span>
-            <h2 className="text-4xl md:text-5xl text-navy">
-              Delivering Excellence Nationwide
+            <h2 className="text-4xl md:text-5xl text-navy mb-6">
+              Delivering Excellence Across the Nation
             </h2>
+            <p className="text-navy/60">
+              Explore our diverse range of projects, from island-wide network rollouts to specialized technical rectifications for Sri Lanka's leading telecom operators.
+            </p>
           </div>
           
-          <div className="flex flex-wrap gap-2 justify-center">
+          <div className="flex flex-wrap gap-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
                   activeCategory === cat 
-                    ? "bg-electric text-white shadow-lg shadow-electric/20" 
-                    : "bg-light-grey text-navy/60 hover:bg-navy/5"
+                    ? "bg-navy text-white shadow-lg" 
+                    : "bg-white text-navy/40 hover:bg-navy/5"
                 }`}
               >
                 {cat}
@@ -127,28 +129,16 @@ export const Projects = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <motion.div 
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+        >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </AnimatePresence>
-        </div>
-
-        <div className="mt-16 p-8 rounded-3xl bg-light-grey border border-navy/5 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="flex items-center gap-6">
-            <div className="w-16 h-16 rounded-2xl bg-navy flex items-center justify-center text-white shrink-0">
-              <CheckCircle size={32} />
-            </div>
-            <div>
-              <h4 className="text-xl font-bold text-navy">Gamata Sanniwedana Project</h4>
-              <p className="text-navy/60">A flagship initiative connecting rural communities across Sri Lanka.</p>
-            </div>
-          </div>
-          <button className="px-8 py-4 bg-navy text-white font-bold rounded-xl hover:bg-navy/90 transition-colors">
-            View Case Study
-          </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -102,10 +102,9 @@ export const About = () => {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/assets/projectcard/Step-2-Install-the-Cabinet-Body-for-outdoor-server-cabinet.webp"
+                src="/assets/projectcard/project_6.webp"
                 alt="Team working on site"
                 className="w-full h-auto"
-                referrerPolicy="no-referrer"
               />
             </div>
             {/* Decorative elements */}

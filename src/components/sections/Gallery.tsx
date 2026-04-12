@@ -3,188 +3,33 @@ import { motion, AnimatePresence } from "motion/react";
 import { ImageIcon, Maximize2, ChevronUp, X } from "lucide-react";
 
 const galleryImages = [
-  {
-    id: 1,
-    title: "Site Infrastructure",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-14_at_02.43.38.jpeg",
-    className: "md:col-span-2 md:row-span-2",
-  },
-  {
-    id: 2,
-    title: "Tower Installation",
-    category: "Technical",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-14_at_14.29.25.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 3,
-    title: "Network Equipment",
-    category: "Telecom",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.19.42.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 4,
-    title: "Field Operations",
-    category: "Operations",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.19.43.jpeg",
-    className: "md:col-span-1 md:row-span-2",
-  },
-  {
-    id: 5,
-    title: "Site Maintenance",
-    category: "Maintenance",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.19.49.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 6,
-    title: "Technical Setup",
-    category: "Technical",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.19.52.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 7,
-    title: "Infrastructure Project",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.19.53.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 8,
-    title: "On-site Engineering",
-    category: "Engineering",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.21.28.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 9,
-    title: "Tower Foundation",
-    category: "Civil",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.21.34.jpeg",
-    className: "md:col-span-2 md:row-span-1",
-  },
-  {
-    id: 10,
-    title: "Telecom Survey",
-    category: "SAQ",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.37.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 11,
-    title: "Site Inspection",
-    category: "Quality Control",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.38.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 12,
-    title: "Equipment Deployment",
-    category: "Telecom",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.39.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 13,
-    title: "Network Expansion",
-    category: "Telecom",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.40_(1).jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 14,
-    title: "Technical Team",
-    category: "Operations",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.40.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 15,
-    title: "Site Powering",
-    category: "Electrical",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.41.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 16,
-    title: "Tower Commissioning",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.28.50.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 17,
-    title: "Infrastructure Rollout",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.36_(1).jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 18,
-    title: "Network Connectivity",
-    category: "Telecom",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.36.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 19,
-    title: "Field Deployment",
-    category: "Operations",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.37.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 20,
-    title: "Technical Maintenance",
-    category: "Maintenance",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.38.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 21,
-    title: "Site Progress",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.45.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 22,
-    title: "Equipment Setup",
-    category: "Technical",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.46.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 23,
-    title: "Final Handover",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.29.56.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 24,
-    title: "Project Completion",
-    category: "Infrastructure",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_10.30.00.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 25,
-    title: "Site Operations",
-    category: "Operations",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_18.06.32.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
-  {
-    id: 26,
-    title: "Final Inspection",
-    category: "Quality Control",
-    image: "/assets/pichero/Gallery/WhatsApp_Image_2026-02-15_at_18.07.41.jpeg",
-    className: "md:col-span-1 md:row-span-1",
-  },
+  { id: 1, title: "Site Infrastructure", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_1.jpeg", className: "md:col-span-2 md:row-span-2" },
+  { id: 2, title: "Tower Installation", category: "Technical", image: "/assets/pichero/Gallery/gallery_2.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 3, title: "Network Equipment", category: "Telecom", image: "/assets/pichero/Gallery/gallery_3.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 4, title: "Field Operations", category: "Operations", image: "/assets/pichero/Gallery/gallery_4.jpeg", className: "md:col-span-1 md:row-span-2" },
+  { id: 5, title: "Site Maintenance", category: "Maintenance", image: "/assets/pichero/Gallery/gallery_5.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 6, title: "Technical Setup", category: "Technical", image: "/assets/pichero/Gallery/gallery_6.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 7, title: "Infrastructure Project", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_7.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 8, title: "On-site Engineering", category: "Engineering", image: "/assets/pichero/Gallery/gallery_8.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 9, title: "Tower Foundation", category: "Civil", image: "/assets/pichero/Gallery/gallery_9.jpeg", className: "md:col-span-2 md:row-span-1" },
+  { id: 10, title: "Telecom Survey", category: "SAQ", image: "/assets/pichero/Gallery/gallery_10.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 11, title: "Site Inspection", category: "Quality Control", image: "/assets/pichero/Gallery/gallery_11.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 12, title: "Equipment Deployment", category: "Telecom", image: "/assets/pichero/Gallery/gallery_12.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 13, title: "Network Expansion", category: "Telecom", image: "/assets/pichero/Gallery/gallery_13.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 14, title: "Technical Team", category: "Operations", image: "/assets/pichero/Gallery/gallery_14.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 15, title: "Site Powering", category: "Electrical", image: "/assets/pichero/Gallery/gallery_15.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 16, title: "Tower Commissioning", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_16.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 17, title: "Infrastructure Rollout", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_17.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 18, title: "Network Connectivity", category: "Telecom", image: "/assets/pichero/Gallery/gallery_18.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 19, title: "Field Deployment", category: "Operations", image: "/assets/pichero/Gallery/gallery_19.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 20, title: "Technical Maintenance", category: "Maintenance", image: "/assets/pichero/Gallery/gallery_20.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 21, title: "Site Progress", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_21.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 22, title: "Equipment Setup", category: "Technical", image: "/assets/pichero/Gallery/gallery_22.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 23, title: "Final Handover", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_23.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 24, title: "Project Completion", category: "Infrastructure", image: "/assets/pichero/Gallery/gallery_24.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 25, title: "Site Operations", category: "Operations", image: "/assets/pichero/Gallery/gallery_25.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 26, title: "Final Inspection", category: "Quality Control", image: "/assets/pichero/Gallery/gallery_26.jpeg", className: "md:col-span-1 md:row-span-1" },
+  { id: 27, title: "Kenya Project", category: "International", image: "/assets/pichero/Gallery/gallery_27.webp", className: "md:col-span-1 md:row-span-1" },
 ];
 
 export const Gallery = () => {
@@ -246,7 +91,6 @@ export const Gallery = () => {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:opacity-50"
-                      referrerPolicy="no-referrer"
                     />
                     
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
@@ -337,7 +181,6 @@ export const Gallery = () => {
                   src={selectedImage.image}
                   alt={selectedImage.title}
                   className="w-full h-full object-contain max-h-[80vh]"
-                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                   <span className="text-electric text-sm font-bold uppercase tracking-widest mb-2 block">
