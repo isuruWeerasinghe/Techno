@@ -291,7 +291,7 @@ export const Gallery = () => {
                   </>
                 )}
                 <span className="ml-2 text-white/40 group-hover:text-white transition-colors">
-                  {showAll ? "↑" : "→"}
+                  {showAll ? "^" : ">"}
                 </span>
               </button>
             </motion.div>

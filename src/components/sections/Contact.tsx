@@ -22,7 +22,7 @@ export const Contact = () => {
               Get In Touch
             </span>
             <h2 className="text-4xl md:text-5xl mb-8">
-              Let’s Build Your <br />
+              Let's Build Your <br />
               <span className="text-electric">Infrastructure Together</span>
             </h2>
             <p className="text-white/60 text-lg mb-12 max-w-md">

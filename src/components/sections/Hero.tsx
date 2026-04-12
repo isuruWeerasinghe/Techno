@@ -69,14 +69,14 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-[1.1]">
-            Building Sri Lanka’s <br />
+            Building Sri Lanka's <br />
             <span>
               Connected Future
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-white/70 mb-10 max-w-2xl leading-relaxed">
-            End-to-End Telecom Infrastructure Solutions — From Site Acquisition to Tower Commissioning. Empowering connectivity across the nation.
+            End-to-End Telecom Infrastructure Solutions - From Site Acquisition to Tower Commissioning. Empowering connectivity across the nation.
           </p>
         </motion.div>
 

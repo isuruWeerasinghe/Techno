@@ -86,7 +86,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-navy/40 text-xs">
-            © 2026 Techno Solutions & Services Lanka (Pvt) Ltd. All rights reserved.
+            (c) 2026 Techno Solutions & Services Lanka (Pvt) Ltd. All rights reserved.
           </div>
           <div className="flex gap-8 text-navy/40 text-xs">
             <a href="#" className="hover:text-navy transition-colors">Privacy Policy</a>

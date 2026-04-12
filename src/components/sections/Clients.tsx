@@ -66,7 +66,7 @@ export const Clients = () => {
                 <div>
                   <div className="font-bold text-navy">{t.name}</div>
                   <div className="text-xs text-navy/50 uppercase tracking-widest font-bold">
-                    {t.role} — {t.company}
+                    {t.role} - {t.company}
                   </div>
                 </div>
               </div>
