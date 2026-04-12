@@ -102,7 +102,7 @@ export const About = () => {
           >
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/assets/projectcard/project_6.webp"
+                src="/assets/projects/project_6.webp"
                 alt="Team working on site"
                 className="w-full h-auto"
               />

@@ -9,7 +9,7 @@ const heroImages = [
   "/assets/pichero/hero_2.png",
   "/assets/pichero/hero_3.png",
   "/assets/pichero/hero_4.jpg",
-  "/assets/pichero/Gallery/gallery_27.webp"
+  "/assets/pichero/gallery/gallery_27.webp"
 ];
 
 export const Hero = () => {

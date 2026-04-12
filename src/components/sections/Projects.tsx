@@ -11,7 +11,7 @@ const projects = [
     location: "Island-wide",
     year: "2024-2026",
     status: "Ongoing",
-    image: "/assets/projectcard/project_2.webp",
+    image: "/assets/projects/project_2.webp",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = [
     location: "Colombo District",
     year: "2023",
     status: "Completed",
-    image: "/assets/projectcard/project_1.jpg",
+    image: "/assets/projects/project_1.jpg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = [
     location: "Kandy District",
     year: "2024",
     status: "Ongoing",
-    image: "/assets/projectcard/project_5.jpg",
+    image: "/assets/projects/project_5.jpg",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projects = [
     location: "Galle District",
     year: "2023",
     status: "Completed",
-    image: "/assets/projectcard/project_4.jpg",
+    image: "/assets/projects/project_4.jpg",
   },
 ];
 
