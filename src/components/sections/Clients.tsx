@@ -2,11 +2,11 @@ import { motion } from "motion/react";
 import { Quote } from "lucide-react";
 
 const clients = [
-  { name: "Dialog Axiata", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Dialog_Axiata_Logo.svg/1200px-Dialog_Axiata_Logo.svg.png" },
-  { name: "Hutch", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Hutch_Logo.svg/2560px-Hutch_Logo.svg.png" },
-  { name: "Airtel", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Airtel_logo.svg/2560px-Airtel_logo.svg.png" },
-  { name: "Mobitel", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Mobitel_Logo.svg/1200px-Mobitel_Logo.svg.png" },
-  { name: "Lanka Bell", logo: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4b/Lanka_Bell_logo.svg/1200px-Lanka_Bell_logo.svg.png" },
+  { name: "Dialog Axiata" },
+  { name: "Hutch" },
+  { name: "Airtel" },
+  { name: "Mobitel" },
+  { name: "Lanka Bell" },
 ];
 
 const testimonials = [

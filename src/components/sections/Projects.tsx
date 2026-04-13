@@ -11,7 +11,7 @@ const projects = [
     location: "Island-wide",
     year: "2024-2026",
     status: "Ongoing",
-    image: "/assets/projects/project_2.webp",
+    image: "https://lh3.googleusercontent.com/d/1nHCfdZDJ7y7RBVjJL-agaOvkT_Tzzsf5",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const projects = [
     location: "Colombo District",
     year: "2023",
     status: "Completed",
-    image: "/assets/projects/project_1.jpg",
+    image: "https://lh3.googleusercontent.com/d/1uWdMraH6kpJhNZBjLu_fjsjkclY55G3I",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const projects = [
     location: "Kandy District",
     year: "2024",
     status: "Ongoing",
-    image: "/assets/projects/project_5.jpg",
+    image: "https://lh3.googleusercontent.com/d/1j3PnyvkxzhXoqFEKl71ugIsLB36tLwDT",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const projects = [
     location: "Galle District",
     year: "2023",
     status: "Completed",
-    image: "/assets/projects/project_4.jpg",
+    image: "https://lh3.googleusercontent.com/d/1WRt1Thv1GKsv7Y6vWZ0IlUBuG8mmVq08",
   },
 ];
 
@@ -58,6 +58,7 @@ const ProjectCard = ({ project }: { project: (typeof projects)[0]; key?: React.K
         src={project.image}
         alt={project.name}
         className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-all duration-700 group-hover:scale-110"
+        referrerPolicy="no-referrer"
       />
       
       <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-navy via-transparent to-transparent pointer-events-none">

@@ -100,12 +100,20 @@ export const About = () => {
             viewport={{ once: true }}
             className="lg:w-1/2 relative"
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="/assets/projects/project_6.webp"
-                alt="Team working on site"
-                className="w-full h-auto"
-              />
+            <div className="relative z-10 rounded-3xl overflow-hidden aspect-video bg-navy flex items-center justify-center border border-navy/10 shadow-2xl">
+              <div className="absolute inset-0 opacity-10">
+                <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="smallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="white" strokeWidth="0.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#smallGrid)" />
+                </svg>
+              </div>
+              <div className="text-electric/40">
+                <CheckCircle2 size={80} strokeWidth={1} />
+              </div>
             </div>
             {/* Decorative elements */}
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-electric/10 rounded-full blur-3xl" />
