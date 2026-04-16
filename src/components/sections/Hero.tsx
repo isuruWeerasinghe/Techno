@@ -73,9 +73,9 @@ export const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-[1.1]">
-            Building Sri Lanka's <br />
+            Pioneering Network <br />
             <span>
-              Connected Future
+              Infrastructure Solutions
             </span>
           </h1>
           
