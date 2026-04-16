@@ -5,11 +5,15 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
 const heroImages = [
-  "/assets/pichero/hero_1.png",
-  "/assets/pichero/hero_2.png",
-  "/assets/pichero/hero_3.png",
-  "/assets/pichero/hero_4.jpg",
-  "/assets/pichero/gallery/gallery_27.webp"
+  "https://lh3.googleusercontent.com/d/171SJmuX94VFN0ZErfwmzSrmtw9udwCQk",
+  "https://lh3.googleusercontent.com/d/1bwZlPIMGj8KRr5c4_TxQ3Tf23HAg674H",
+  "https://lh3.googleusercontent.com/d/1KYiCSP8DjXN14aZ18E8v6MeqGhq0k8wA",
+  "https://lh3.googleusercontent.com/d/12-WMOZ5grC8L8Iw7y_nhOgUt8rSqRnVp",
+  "https://lh3.googleusercontent.com/d/1QaTijYDRP2V4nCqxroQBqmtSltV9VuTj",
+  "https://lh3.googleusercontent.com/d/1eA8Lpimhf9Q_oGqGZw0cqV94NQptFC2t",
+  "https://lh3.googleusercontent.com/d/1qMKhs7HyZIZrwM92ghOcgVfudM8sYXn6",
+  "https://lh3.googleusercontent.com/d/1ydgQitRVWzZVrvsQwkM2n-fsbUqYOusl",
+  "https://lh3.googleusercontent.com/d/1-ZFRsWf6Za-2MfD9XnjIDqi6cpRX_oT-",
 ];
 
 export const Hero = () => {
@@ -28,8 +32,23 @@ export const Hero = () => {
 
   return (
     <section id="home" className="relative h-screen w-full overflow-hidden bg-zinc-950">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-navy via-zinc-950 to-zinc-900" />
+      {/* Dynamic Background Slideshow */}
+      <div className="absolute inset-0 z-0">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentImageIndex}
+            src={heroImages[currentImageIndex]}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 0.4, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+            alt="Telecom Infrastructure"
+            className="w-full h-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950/60 via-zinc-950/40 to-zinc-950" />
+      </div>
 
       {/* Animated Network Lines (Subtle SVG) */}
       <svg className="absolute inset-0 w-full h-full opacity-10 pointer-events-none" xmlns="http://www.w3.org/2000/svg">

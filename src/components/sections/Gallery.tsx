@@ -2,7 +2,28 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ImageIcon, Maximize2, ChevronUp, X } from "lucide-react";
 
-const galleryImages: any[] = [];
+const galleryImages = [
+  { id: 1, title: "Tower Infrastructure", category: "Infrastructure", image: "https://lh3.googleusercontent.com/d/1Kfi56pJcz2hIvnUbO2M5eanOOwjpVijy", className: "md:col-span-2 md:row-span-2" },
+  { id: 2, title: "Site Survey", category: "SAQ", image: "https://lh3.googleusercontent.com/d/1V4TWtrZmMxCA12v3M9qGPxXtal7In06I", className: "md:col-span-1 md:row-span-1" },
+  { id: 3, title: "Equipment Installation", category: "Technical", image: "https://lh3.googleusercontent.com/d/1TVaQMsNJ0lJHRDdf_nIAKJfyIPpuEqKD", className: "md:col-span-1 md:row-span-1" },
+  { id: 4, title: "Network Maintenance", category: "Maintenance", image: "https://lh3.googleusercontent.com/d/1V7SGQPoiNVRL1Vfy2pJ8EgOPTnLspRpW", className: "md:col-span-1 md:row-span-2" },
+  { id: 5, title: "Field Operations", category: "Operations", image: "https://lh3.googleusercontent.com/d/1bq65vL1apPrKoZFK-Ojv2yPLsWkS3FOW", className: "md:col-span-1 md:row-span-1" },
+  { id: 6, title: "Technical Support", category: "Technical", image: "https://lh3.googleusercontent.com/d/1Sqai-odRZHxBMsnZ_AvHliiEcrkQitHg", className: "md:col-span-1 md:row-span-1" },
+  { id: 7, title: "Infrastructure Project", category: "Infrastructure", image: "https://lh3.googleusercontent.com/d/1-stqUCwWIrIt8lVv7ic8nxkOXySENnbT", className: "md:col-span-1 md:row-span-1" },
+  { id: 8, title: "Site Inspection", category: "Quality Control", image: "https://lh3.googleusercontent.com/d/1hfBORmkyIjAyAfzky4tlVJzHkalKxRbQ", className: "md:col-span-1 md:row-span-1" },
+  { id: 9, title: "Telecom Deployment", category: "Telecom", image: "https://lh3.googleusercontent.com/d/1G3ebwOpzUMDFUlmodPV2SJBBq0NwVAoT", className: "md:col-span-2 md:row-span-1" },
+  { id: 10, title: "Tower Foundation", category: "Civil", image: "https://lh3.googleusercontent.com/d/1sJi_IO4b-6vRw_PKwYvatoubcPCJOsjE", className: "md:col-span-1 md:row-span-1" },
+  { id: 11, title: "Network Expansion", category: "Telecom", image: "https://lh3.googleusercontent.com/d/1whbUm-n-v6x2kIYi5f533dXnnhTCaihu", className: "md:col-span-1 md:row-span-1" },
+  { id: 12, title: "Technical Team", category: "Operations", image: "https://lh3.googleusercontent.com/d/1nB0AVkRAYbiGacRv37PmtoK86GmEbV4S", className: "md:col-span-1 md:row-span-1" },
+  { id: 13, title: "Site Powering", category: "Electrical", image: "https://lh3.googleusercontent.com/d/16_Y6X3RKt3pQnP2PB8Ugjq70t16V5ngp", className: "md:col-span-1 md:row-span-1" },
+  { id: 14, title: "Tower Commissioning", category: "Infrastructure", image: "https://lh3.googleusercontent.com/d/1atG02ppdAFoOHdhuHq45hkQEagtshhbS", className: "md:col-span-1 md:row-span-1" },
+  { id: 15, title: "Field Deployment", category: "Operations", image: "https://lh3.googleusercontent.com/d/1TSkog2vdY6LRy1sBYtomwjGZEkCPiLsp", className: "md:col-span-1 md:row-span-1" },
+  { id: 16, title: "Technical Maintenance", category: "Maintenance", image: "https://lh3.googleusercontent.com/d/1BWQtuZQ79T5Pk0fkBkPk2FCIHYL8YTpq", className: "md:col-span-1 md:row-span-1" },
+  { id: 17, title: "Site Progress", category: "Infrastructure", image: "https://lh3.googleusercontent.com/d/19cCh_49PnbNhlJeYC9R_d6YGgsMuPgGI", className: "md:col-span-1 md:row-span-1" },
+  { id: 18, title: "Equipment Setup", category: "Technical", image: "https://lh3.googleusercontent.com/d/1zToH19-XU7_7nScrtWepT7FzdylHWrMA", className: "md:col-span-1 md:row-span-1" },
+  { id: 19, title: "Final Handover", category: "Infrastructure", image: "https://lh3.googleusercontent.com/d/13c0AnWb9eWy1AcDZklQrLgR-O73KCsFU", className: "md:col-span-1 md:row-span-1" },
+  { id: 20, title: "Project Completion", category: "Infrastructure", image: "https://lh3.googleusercontent.com/d/1asvhhPmKOrHCzAWyo2u7w1IktA92wwMs", className: "md:col-span-1 md:row-span-1" },
+];
 
 export const Gallery = () => {
   const [showAll, setShowAll] = useState(false);
@@ -63,6 +84,7 @@ export const Gallery = () => {
                       src={item.image}
                       alt={item.title}
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:opacity-50"
+                      referrerPolicy="no-referrer"
                     />
                     
                     <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
@@ -153,6 +175,7 @@ export const Gallery = () => {
                   src={selectedImage.image}
                   alt={selectedImage.title}
                   className="w-full h-full object-contain max-h-[80vh]"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                   <span className="text-electric text-sm font-bold uppercase tracking-widest mb-2 block">
